@@ -25,9 +25,9 @@ int current_sensor = 0; //0 is the left sensor, 1 is the right sensor
 
 // define variables we will be connecting
 double Setpoint0, Input0, Output0, Setpoint1, Input1, Output1;
-int Kp = 2;
-int Ki = 0.05;
-int Kd = 0.8;
+int Kp = 3; // 2
+int Ki = 0.05; // 0.05
+int Kd = 0.9; // 0.8
 
 //Specify links and initial tuning parameters of PID
 PID myPID0(&Input0, &Output0, &Setpoint0, Kp, Ki, Kd, DIRECT);
@@ -40,8 +40,8 @@ void setup() {
   //initialize linked variables
   Input0 = left_sonar.ping_cm();
   Input1 = right_sonar.ping_cm(); 
-  Setpoint0 = 15;
-  Setpoint1 = 15;
+  Setpoint0 = 10; //15
+  Setpoint1 = 10; //15
 
   //set output limits 
   myPID0.SetOutputLimits(-40, 80);
@@ -112,16 +112,16 @@ if (Input0 < Input1) {
   // control the vehicle base on the prioritized sensor and its reading
   switch (current_sensor) {
     case 0: // control left motor
-      analogWrite(motorPins[1][2], 120 + Output0); // left motor
-      analogWrite(motorPins[0][2], 130); // right motor
+      analogWrite(motorPins[1][2], 80 + Output0); // left motor
+      analogWrite(motorPins[0][2], 90 - Output0); // right motor
       break;
     case 1: // control right motor
-      analogWrite(motorPins[0][2], 130 + Output1); // right motor
-      analogWrite(motorPins[1][2], 120); // left motor
+      analogWrite(motorPins[0][2], 90 + Output1); // right motor
+      analogWrite(motorPins[1][2], 80 - Output1); // left motor
       break;
     case 2: // go straight
-      analogWrite(motorPins[0][2], 130); // right motor
-      analogWrite(motorPins[1][2], 120); // left motor
+      analogWrite(motorPins[0][2], 90); // right motor
+      analogWrite(motorPins[1][2], 80); // left motor
   }
 
   delay(20);
