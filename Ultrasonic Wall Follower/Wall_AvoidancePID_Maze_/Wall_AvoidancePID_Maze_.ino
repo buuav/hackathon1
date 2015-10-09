@@ -26,9 +26,9 @@ int current_sensor = 0; //0 is the left sensor, 1 is the right sensor
 
 // define variables we will be connecting
 double Setpoint0, Input0, Output0, Setpoint1, Input1, Output1;
-int Kp = 3.0; // 3.5
+int Kp = 3.0; // 3.0
 int Ki = 0.05; // 0.05
-int Kd = 1.2; // 1.2
+int Kd = 0.85; // 0.85
 
 //Specify links and initial tuning parameters of PID
 PID myPID0(&Input0, &Output0, &Setpoint0, Kp, Ki, Kd, DIRECT);
@@ -41,8 +41,8 @@ void setup() {
   //initialize linked variables
   Input0 = left_sonar.ping_cm();
   Input1 = right_sonar.ping_cm();
-  Setpoint0 = 8; //15
-  Setpoint1 = 8; //15
+  Setpoint0 = 10; //15
+  Setpoint1 = 10; //15
 
   //set output limits
   myPID0.SetOutputLimits(-40, 80);
