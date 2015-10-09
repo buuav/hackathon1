@@ -18,9 +18,10 @@ for (int i = 0; i < 3; i++) {
   pinMode(rightMotorPins[i], OUTPUT); // for loop goes through the index and sets as HIGH
 }
 
-// this sets A0 and B0 to HIGH and A1 and B1 to LOW output on each motor
-// this will determine the direction that the motors turn
-// switch HIGH and LOW to go in the other direction
+// this sets the Arduino digital pins to HIGH or LOW and consequently sets
+// A0 and B0 to HIGH and A1 and B1 to LOW output on each motor
+// this will determine the direction that the motors turn.
+// switch HIGH and LOW in a pair to go in the other direction
 digitalWrite(leftMotorPins[0], HIGH);
 digitalWrite(rightMotorPins[0], HIGH);
 digitalWrite(leftMotorPins[1], LOW);
