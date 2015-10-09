@@ -10,8 +10,7 @@ class LineSensor {
 
   public:
     LineSensor(int pin0, int pin1, int pin2);
-    bool isLineVisible();
-    double getLinePosition();
+    int getLinePosition();
     void calibrate(void);
 };
 
