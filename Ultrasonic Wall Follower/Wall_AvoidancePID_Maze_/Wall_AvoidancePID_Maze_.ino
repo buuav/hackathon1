@@ -26,7 +26,7 @@ int current_sensor = 0; //0 is the left sensor, 1 is the right sensor
 
 // define variables we will be connecting
 double Setpoint0, Input0, Output0, Setpoint1, Input1, Output1;
-int Kp = 3.0; // 3.0
+int Kp = 3.2; // 3.0
 int Ki = 0.05; // 0.05
 int Kd = 0.85; // 0.85
 
