@@ -4,8 +4,8 @@
 // concise.
 
 // create the variables that defines which pins the motors are connected to
-const int leftMotorPins[3] = {4, 5, 6};    
-const int rightMotorPins[3] = {7, 8, 9}; 
+const int rightMotorPins[3] = {4, 5, 6};    
+const int leftMotorPins[3] = {7, 8, 9}; 
 
 //----------//
 // This is the set-up for all of the pins you are using on the Arduino
@@ -32,7 +32,7 @@ digitalWrite(rightMotorPins[1], LOW);
 //This is the main section of your code, it repeatedly loops through.
 void loop() {
 
-  // this tells the motors to run (default value is 100), change this and see what happens.
+  // this tells the motors to run at 100 change this and see what happens.
   analogWrite(leftMotorPins[2], 100); 
   analogWrite(rightMotorPins[2], 100); 
   delay(20); // this delay is necessary to give it a little more time to move and process.
