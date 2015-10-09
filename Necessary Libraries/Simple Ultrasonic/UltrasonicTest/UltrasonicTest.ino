@@ -1,9 +1,9 @@
-// This script is a sample to show how to use the HC-SR04 ultrasonic sensor 
+// This script is a sample to show how to use the HC-SR04 ultrasonic sensor.
 
 #include <NewPing.h>
 
-#define TRIGGER_PIN 12   //Trigger pin (sends out the ultrasonic pulse)
-#define ECHO_PIN    11   //Echo pin (recieves the ultrasonic pulse).
+#define TRIGGER_PIN 12   //Trigger pin (sends out the ultrasonic pulse).
+#define ECHO_PIN    13   //Echo pin (recieves the ultrasonic pulse).
 #define MAX_DIST    100  //Max distance the ultrasonic will sense. (Effective range is <3m)
 
 //set up the sonar, connect the arduino to the corresponding pins on the ultrasonic.
