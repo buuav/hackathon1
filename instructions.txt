@@ -1,0 +1,11 @@
+INSTRUCTIONS
+1.  Download the Arduino IDE (1.6.3) from : https://www.arduino.cc/en/Main/Donate. You guys don’t need to donate!
+2. Download the drivers from : http://www.kupply.com/wp-content/uploads/2015/01/CH341SER.zip.
+3. Unzip the contents of the folder and plug in the DCcduino to the computer via USB. 
+4. Install the setup file as admin.
+5. Your Arduino should show up on the device manager and will be assigned a COM port. under Ports (Com and LPT).
+6. Open the Arduino IDE application. Under tools under boards select Arduino Uno.
+7. Under tools under port select the COM port your Arduino was assigned in device manager.
+8. Copy the NewPing and other libraries in libraries folder in the destination where you installed arduino. 
+9. Now you are ready to compile and upload your code. 
+
