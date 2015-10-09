@@ -56,8 +56,8 @@ void loop() {
     analogWrite(leftMotorPins[2], 70); // slow down, we are getting close to the wall.
     analogWrite(rightMotorPins[2], 70);
   } else {
-    analogWrite(leftMotorPins[2], 200); // go fast we are far from the object.
-    analogWrite(rightMotorPins[2], 200);
+    analogWrite(leftMotorPins[2], 120); // go fast we are far from the object.
+    analogWrite(rightMotorPins[2], 120);
   }
   delay(40); // necessary delay to allow the sensor to get the data.
 }
